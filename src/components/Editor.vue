@@ -12,6 +12,9 @@
 
   export default {
     name: "Editor",
+    props: {
+      value: null
+    },
     data() {
       return {
         editor: null
@@ -24,17 +27,18 @@
           header: Header,
           list: List
         },
-        minHeight: 0
+        minHeight: 0,
+        onChange: (r) => {
+          console.log('Now I know that Editor\'s content changed!')
+          r.saver.save().then((outputData) => {
+            this.$emit('input', outputData);
+          }).catch((error) => {
+            console.log('Saving failed: ', error)
+          });
+        }
       });
     },
     methods: {
-      getData() {
-        this.editor.save().then((outputData) => {
-          console.log('Article data: ', outputData)
-        }).catch((error) => {
-          console.log('Saving failed: ', error)
-        });
-      }
     },
     beforeUnmount(){
       this.editor.destroy();
