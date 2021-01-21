@@ -5,11 +5,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import 'git-describe'
-
+import VueRouterMultiView from 'vue-router-multi-view'
 import { BootstrapVue } from 'bootstrap-vue'
 
-Vue.use(BootstrapVue)
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
+Vue.use(BootstrapVue)
+Vue.use(VueRouterMultiView)
 
 Vue.config.productionTip = false
 

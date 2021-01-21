@@ -36,5 +36,8 @@
         });
       }
     },
+    beforeUnmount(){
+      this.editor.destroy();
+    },
   }
 </script>
