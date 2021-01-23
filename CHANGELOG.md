@@ -1,3 +1,16 @@
+## [1.0.1](https://github.com/averichev/vera.cms/compare/v1.0.0...v1.0.1) (2021-01-23)
+
+### Chores
+
+- Automatic release ([1ae18cb](https://github.com/averichev/vera.cms/commit/1ae18cb1adc4987f8c1a55e755fbad9d1fb5cc7b))
+- Automatic release ([130c389](https://github.com/averichev/vera.cms/commit/130c38924c1edde4eea7aea182749e6b406e630f))
+- Automatic release ([7625a9d](https://github.com/averichev/vera.cms/commit/7625a9d7bc2eb4ae3f31c5d0d86fd2e2f89a0b1d))
+- Automatic release ([226f55e](https://github.com/averichev/vera.cms/commit/226f55e5cd5b1cde8474619f92686dd2ff0888df))
+
+### Other
+
+- Merge branch 'master' of https://github.com/averichev/vera.cms ([91804b4](https://github.com/averichev/vera.cms/commit/91804b4849f7bb4a74b121e30f2a0255f12ec460))
+
 # 1.0.0 (2021-01-22)
 
 ### Bug Fixes
