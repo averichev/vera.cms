@@ -11,17 +11,17 @@
             <span class="small text-muted">{{frontVersion}}</span>
         </footer>
     </div>
-    
+
 </template>
 
 <script>
-  /* global GIT_DESCRIBE */
-  export default {
-    name: "AdminHome",
-    computed:{
-      frontVersion () {
-        return GIT_DESCRIBE.tag
-      },
+/* global GIT_DESCRIBE */
+export default {
+  name: 'AdminHome',
+  computed: {
+    frontVersion () {
+      return GIT_DESCRIBE.tag
     }
   }
+}
 </script>

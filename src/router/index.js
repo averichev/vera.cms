@@ -24,7 +24,7 @@ const routes = [
     path: '/admin/page/new/',
     name: 'admin_page_new',
     component: () => import('../views/Admin/Page/NewPage')
-  },
+  }
 ]
 
 const router = new VueRouter({
