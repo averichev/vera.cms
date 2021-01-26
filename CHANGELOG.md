@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/averichev/vera.cms/compare/v1.0.1...v1.1.0) (2021-01-26)
+
+### Chores
+
+- merge ([d1928c5](https://github.com/averichev/vera.cms/commit/d1928c50a860174259a0c9ed1ad8fe64a0eaaf0c))
+
+### Features
+
+- Authentication logic ([c522ec7](https://github.com/averichev/vera.cms/commit/c522ec7b64924996e0b5d62d3f23f4600acb011c))
+- Pages CRUD ([31423bb](https://github.com/averichev/vera.cms/commit/31423bbb69adfec8a996a08a323abdd0d9a90727))
+- Pages CRUD ([53282c7](https://github.com/averichev/vera.cms/commit/53282c7919d0c5351ba0e78fdd729f4b31a1cee4))
+
 ## [1.0.1](https://github.com/averichev/vera.cms/compare/v1.0.0...v1.0.1) (2021-01-23)
 
 ### Chores
