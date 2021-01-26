@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Создание страницы</h1>
+        <h1>Изменение страницы</h1>
         <b-form @submit.prevent="submit">
             <b-form-group
                 id="name"
@@ -34,21 +34,32 @@
   import Editor from '@/components/Editor'
 
   export default {
-    name: 'NewPage',
+    name: 'EditPage',
     components: {Editor},
     data() {
       return {
         page: {
           header: '',
-          content: null
+          content: null,
+          id: null
         }
       }
     },
+    mounted() {
+      this.getPage()
+    },
     methods: {
+      getPage(){
+        const pageId = this.$route.params.pageId
+        this.$httpClient.get('/api/pages/'+pageId)
+          .then(r => {
+            this.page = r.data
+          })
+      },
       submit(e) {
         e.preventDefault()
         this.$httpClient
-          .post('/api/page/add', this.page)
+          .post('/api/page/update/', this.page)
           .then(() => {
             this.$router.push({name: "pages"})
           })

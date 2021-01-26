@@ -25,7 +25,6 @@ function install(pVue) {
       return client.get(path)
     },
     post(path, data){
-      console.log(process.env)
       return client.post(path, data)
     }
   }
