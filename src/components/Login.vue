@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <div>
         <h1>Вход</h1>
         <b-form @submit="onSubmit">
             <b-form-group
@@ -32,20 +32,30 @@
                 type="submit"
                 variant="primary"
             >
-                Submit
+                Войти
             </b-button>
         </b-form>
     </div>
 </template>
+
 <script>
   export default {
-    name: 'Login',
+    name: "Login",
     data () {
       return {
         form: {
           username: '',
           password: ''
-        }
+        },
+        userChecked: false,
+      }
+    },
+    computed: {
+      currentUser () {
+        return this.$store.state.authUser
+      },
+      isUserLoggedIn(){
+        return this.userChecked === true && this.currentUser !== null
       }
     },
     methods: {
@@ -54,7 +64,7 @@
         this.$httpClient
           .post('/api/login', this.form)
           .then(r => {
-            localStorage.setItem('vera.token', r.data.token)
+            this.$store.commit('updateToken', r.data.token)
           })
       }
     }
