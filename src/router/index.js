@@ -7,28 +7,27 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home
   },
   {
-    path: '/login/',
-    name: 'login',
-    component: () => import('../views/Login.vue')
+    path: '/pages/',
+    name: 'pages',
+    component: () => import('../views/Admin/Page/ListPage')
   },
   {
-    path: '/admin/homepage/',
-    name: 'admin_homepage',
-    component: () => import('../views/Admin/AdminHome')
-  },
-  {
-    path: '/admin/page/new/',
-    name: 'admin_page_new',
+    path: '/page/new/',
+    name: 'pages_new',
     component: () => import('../views/Admin/Page/NewPage')
   },
+  {
+    path: '/page/edit/:pageId/',
+    name: 'pages_edit',
+    component: () => import('../views/Admin/Page/EditPage')
+  }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })

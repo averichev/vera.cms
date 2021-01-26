@@ -1,47 +1,69 @@
 <template>
     <div>
-        <div id="editorjs"></div>
+        <div id="editorjs" />
     </div>
 </template>
 
 <script>
-  import EditorJS from '@editorjs/editorjs';
-  import Header from '@editorjs/header';
-  import List from '@editorjs/list';
-
+  import EditorJS from '@editorjs/editorjs'
+  import Header from '@editorjs/header'
+  import List from '@editorjs/list'
 
   export default {
-    name: "Editor",
+    name: 'Editor',
     props: {
-      value: null
-    },
-    data() {
-      return {
-        editor: null
+      value: {
+        type: Object,
+        default: function (){
+          return {}
+        }
       }
     },
-    mounted() {
-      this.editor = new EditorJS({
-        holder: 'editorjs',
-        tools: {
-          header: Header,
-          list: List
-        },
-        minHeight: 0,
-        onChange: (r) => {
-          console.log('Now I know that Editor\'s content changed!')
-          r.saver.save().then((outputData) => {
-            this.$emit('input', outputData);
-          }).catch((error) => {
-            console.log('Saving failed: ', error)
-          });
+    data () {
+      return {
+        editor: null,
+        editorIsReady: false
+      }
+    },
+    computed: {
+      editorIsReadyRender(){
+        return this.editorIsReady && this.value!==null
+      }
+    },
+    watch: {
+      editorIsReadyRender(data){
+        if (data === true) {
+          this.editor.render(this.value)
         }
-      });
+      }
+    },
+    mounted () {
+      if (this.editor !== null) {
+        this.editor.destroy()
+      }
+      this.initEditor();
     },
     methods: {
-    },
-    beforeUnmount(){
-      this.editor.destroy();
-    },
+      initEditor(){
+        this.editor = new EditorJS({
+          holder: 'editorjs',
+          tools: {
+            header: Header,
+            list: List
+          },
+          minHeight: 0,
+          onChange: (r) => {
+            r.saver.save().then((outputData) => {
+              this.$emit('input', outputData)
+            }).catch((error) => {
+              console.log('Saving failed: ', error)
+            })
+          },
+          onReady: () => {
+            this.editorIsReady = true
+          }
+        })
+      }
+    }
   }
 </script>
