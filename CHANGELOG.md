@@ -1,3 +1,9 @@
+# [1.5.0](https://github.com/averichev/vera.cms/compare/v1.4.0...v1.5.0) (2021-03-11)
+
+### Features
+
+- Description field for new page #7 ([8649013](https://github.com/averichev/vera.cms/commit/86490131c50b6821170e6246cd12231e4eacb3b9)), closes [#7](https://github.com/averichev/vera.cms/issues/7)
+
 # [1.4.0](https://github.com/averichev/vera.cms/compare/v1.3.0...v1.4.0) (2021-03-11)
 
 ### Features
