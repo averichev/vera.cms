@@ -14,6 +14,17 @@
                     required
                 />
             </b-form-group>
+            <b-form-group
+                label="Описание"
+                label-for="description"
+            >
+                <b-form-input
+                    id="description"
+                    v-model="page.description"
+                    placeholder="meta-tag description"
+                    required
+                />
+            </b-form-group>
             <Editor
                 ref="editor"
                 v-model="page.content"
@@ -40,7 +51,8 @@
       return {
         page: {
           header: '',
-          content: null
+          content: null,
+          description: null
         }
       }
     },
