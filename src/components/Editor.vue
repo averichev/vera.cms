@@ -69,9 +69,9 @@
           codeBox: {
             class: CodeBox,
             config: {
-              themeURL: 'https://unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/dracula.min.css',
-              themeName: 'dracula',
-              useDefaultTheme: 'dracula'
+              themeURL: 'https://unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/darcula.min.css',
+              themeName: 'darcula',
+              useDefaultTheme: 'darcula'
             }
           },
           inlineCode: {

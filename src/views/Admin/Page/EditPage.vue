@@ -8,9 +8,20 @@
                 label-for="name"
             >
                 <b-form-input
-                    id="input-2"
+                    id="name"
                     v-model="page.header"
                     placeholder="укажите название страницы"
+                    required
+                />
+            </b-form-group>
+            <b-form-group
+                label="Описание"
+                label-for="description"
+            >
+                <b-form-input
+                    id="description"
+                    v-model="page.description"
+                    placeholder="meta-tag description"
                     required
                 />
             </b-form-group>
@@ -41,7 +52,8 @@
         page: {
           header: '',
           content: null,
-          id: null
+          id: null,
+          description: null
         }
       }
     },
@@ -49,9 +61,9 @@
       this.getPage()
     },
     methods: {
-      getPage(){
+      getPage() {
         const pageId = this.$route.params.pageId
-        this.$httpClient.get('/api/pages/'+pageId)
+        this.$httpClient.get('/api/pages/' + pageId)
           .then(r => {
             this.page = r.data
           })
