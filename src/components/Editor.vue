@@ -8,6 +8,8 @@
   import EditorJS from '@editorjs/editorjs'
   import Header from '@editorjs/header'
   import List from '@editorjs/list'
+  import CodeBox from '@bomdi/codebox'
+  import InlineCode from '@editorjs/inline-code'
 
   export default {
     name: 'Editor',
@@ -47,11 +49,7 @@
       initEditor(){
         this.editor = new EditorJS({
           holder: 'editorjs',
-          tools: {
-            header: Header,
-            list: List
-          },
-          minHeight: 0,
+          tools: this.editorTools(),
           onChange: (r) => {
             r.saver.save().then((outputData) => {
               this.$emit('input', outputData)
@@ -63,6 +61,24 @@
             this.editorIsReady = true
           }
         })
+      },
+      editorTools(){
+        return {
+          header: Header,
+          list: List,
+          codeBox: {
+            class: CodeBox,
+            config: {
+              themeURL: 'https://unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/dracula.min.css',
+              themeName: 'dracula',
+              useDefaultTheme: 'dracula'
+            }
+          },
+          inlineCode: {
+            class: InlineCode,
+            shortcut: 'CMD+SHIFT+M',
+          },
+        }
       }
     }
   }
