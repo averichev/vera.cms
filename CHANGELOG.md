@@ -1,3 +1,13 @@
+# [1.3.0](https://github.com/averichev/vera.cms/compare/v1.2.0...v1.3.0) (2021-03-11)
+
+### Features
+
+- Code block #5 ([690d9d7](https://github.com/averichev/vera.cms/commit/690d9d7a94471d0103ad48c9749d009b29f6f256)), closes [#5](https://github.com/averichev/vera.cms/issues/5)
+
+### Other
+
+- Merge pull request #6 from averichev/dev-5-code-block ([fe4a19e](https://github.com/averichev/vera.cms/commit/fe4a19e29459af71771736e599d497cd491170d5)), closes [#6](https://github.com/averichev/vera.cms/issues/6) [#5](https://github.com/averichev/vera.cms/issues/5)
+
 # [1.2.0](https://github.com/averichev/vera.cms/compare/v1.1.0...v1.2.0) (2021-01-28)
 
 ### Chores
