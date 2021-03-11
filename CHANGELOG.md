@@ -1,3 +1,17 @@
+# [1.4.0](https://github.com/averichev/vera.cms/compare/v1.3.0...v1.4.0) (2021-03-11)
+
+### Features
+
+- Description field for page #7 ([36425dc](https://github.com/averichev/vera.cms/commit/36425dc40391779e0c0fac121d28caf5feca6eae)), closes [#7](https://github.com/averichev/vera.cms/issues/7)
+
+### Improvements
+
+- Darcula theme for code block ([f5d3af5](https://github.com/averichev/vera.cms/commit/f5d3af521c2c769482d84e9b3e5e6536f4ed5637))
+
+### Other
+
+- Merge pull request #8 from averichev/dev-7-description-field-for-page ([ae18ba5](https://github.com/averichev/vera.cms/commit/ae18ba5eae34a6021f8f3d7561b8135c0d95e491)), closes [#8](https://github.com/averichev/vera.cms/issues/8)
+
 # [1.3.0](https://github.com/averichev/vera.cms/compare/v1.2.0...v1.3.0) (2021-03-11)
 
 ### Features
