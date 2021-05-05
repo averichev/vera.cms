@@ -10,6 +10,7 @@
   import List from '@editorjs/list'
   import CodeBox from '@bomdi/codebox'
   import InlineCode from '@editorjs/inline-code'
+  import RawTool from '@editorjs/raw'
 
   export default {
     name: 'Editor',
@@ -78,6 +79,7 @@
             class: InlineCode,
             shortcut: 'CMD+SHIFT+M',
           },
+          raw: RawTool,
         }
       }
     }
