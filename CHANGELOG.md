@@ -1,3 +1,13 @@
+# [1.6.0](https://github.com/averichev/vera.cms/compare/v1.5.0...v1.6.0) (2021-05-05)
+
+### Features
+
+- Raw html block for editor.js ([b2000f9](https://github.com/averichev/vera.cms/commit/b2000f90f71983e776442db68254af5cf6f0542b))
+
+### Other
+
+- Merge pull request #10 from averichev/dev-9-raw-html-block ([ebfd08b](https://github.com/averichev/vera.cms/commit/ebfd08bed73271aa743a5a891cbd51e2a51e350e)), closes [#10](https://github.com/averichev/vera.cms/issues/10)
+
 # [1.5.0](https://github.com/averichev/vera.cms/compare/v1.4.0...v1.5.0) (2021-03-11)
 
 ### Features
